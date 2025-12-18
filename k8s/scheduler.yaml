@@ -15,6 +15,7 @@ spec:
       containers:
       - name: scheduler
         image: scheduler:latest
+        imagePullPolicy: Never
         env:
         - name: REDIS_HOST
           value: "redis"

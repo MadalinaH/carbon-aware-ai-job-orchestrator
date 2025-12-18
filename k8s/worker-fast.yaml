@@ -15,6 +15,7 @@ spec:
       containers:
       - name: worker
         image: worker:latest
+        imagePullPolicy: Never
         env:
         - name: MODE
           value: "FAST"

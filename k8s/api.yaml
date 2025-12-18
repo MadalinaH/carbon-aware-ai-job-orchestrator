@@ -15,6 +15,7 @@ spec:
       containers:
       - name: api
         image: api:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8000
         env:
