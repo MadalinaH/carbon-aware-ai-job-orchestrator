@@ -17,8 +17,8 @@ fi
 echo ""
 echo "=== Building Docker images ==="
 docker build -t api:latest ./services/api
-docker build -t scheduler:latest ./services/scheduler
-docker build -t worker:latest ./services/worker
+docker build -t scheduler:latest -f ./services/scheduler/Dockerfile .
+docker build -t worker:latest -f ./services/worker/Dockerfile .
 
 # Load images into kind cluster
 echo ""

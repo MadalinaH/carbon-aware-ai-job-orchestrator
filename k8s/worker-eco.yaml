@@ -21,4 +21,6 @@ spec:
           value: "ECO"
         - name: REDIS_HOST
           value: "redis"
+        - name: PYTHONUNBUFFERED
+          value: "1"
 

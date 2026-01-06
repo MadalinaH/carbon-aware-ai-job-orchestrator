@@ -1,2 +1,2 @@
-# No external dependencies required - uses Python standard library only
+redis>=5.0.0
 

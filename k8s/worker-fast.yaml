@@ -21,4 +21,6 @@ spec:
           value: "FAST"
         - name: REDIS_HOST
           value: "redis"
+        - name: PYTHONUNBUFFERED
+          value: "1"
 

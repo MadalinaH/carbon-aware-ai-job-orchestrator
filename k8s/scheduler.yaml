@@ -19,8 +19,8 @@ spec:
         env:
         - name: REDIS_HOST
           value: "redis"
-        - name: LOW_THRESHOLD
-          value: "200"
-        - name: HIGH_THRESHOLD
-          value: "400"
+        - name: POLICY_PATH
+          value: "/app/policy.yaml"
+        - name: PYTHONUNBUFFERED
+          value: "1"
 

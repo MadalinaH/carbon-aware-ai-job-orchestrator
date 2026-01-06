@@ -1,0 +1,29 @@
+thresholds:
+  low: 200
+  high: 400
+
+rules:
+  - condition: urgency == critical
+    mode: FAST
+    policy_rule_id: CRITICAL_OVERRIDE
+  
+  - condition: carbon_intensity < low
+    mode: FAST
+    policy_rule_id: LOW_CARBON_FAST
+  
+  - condition: carbon_intensity > high
+    mode: ECO
+    policy_rule_id: HIGH_CARBON_ECO
+  
+  - condition: carbon_intensity >= low AND carbon_intensity <= high AND urgency == flexible
+    mode: DEFER
+    policy_rule_id: MEDIUM_FLEX_DEFER
+  
+  - condition: default
+    mode: ECO
+    policy_rule_id: MEDIUM_DEFAULT_ECO
+
+guardrails:
+  max_deferral_seconds: 600
+
+
